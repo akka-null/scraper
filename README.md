@@ -3,7 +3,7 @@
 
 ## i needed to get data for my seeding script for [Microland](https://github.com/akka-null/Microland)
 
-# description ( i got you future Akka)
+# description ( i got you future Akka i know i suck at documenting stuff deal with it)
 
 * this script will take a link to a store page and retrieve all the data in an Array of objects: 
 * fields **"type"**, **"category"**,**"condition"** were diffrent from what im using in my DB so i just used the power of Vim to suite my use case.
@@ -27,8 +27,27 @@
 ```
 
 ## usage
+* scrapMeDaddy will take a **link** and **NumberOfPages** as command lin argument
+* it will loop through the store pages and get the products links
+* then it will proceed and get each product information and output it array in  **data.js** file
+
+### if you want to get only the gpu in store provide the link category and how manny pages that category hase
+``` bash
+npm start "https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page=" 1
+```
+### if you want to get all the products include the home page of the store and the number of pages it has
+``` bash
+npm start https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page= 5
+```
+
 ```bash
 npm start STORE_LINK NUMBER_OF_PAGES
+
+# NOTE:  the links look like this in ouedkniss
+# https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page=1
+# https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page=1
+# we mush provide the link?page= NumberOfPages
+# https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page= 1
 
 ```
 * ouedkniss links comes in this format:
