@@ -1,12 +1,12 @@
-# ScrapMeDaddy (don't take the name sriously)
-* it's a script to web scrape [ouedkniss](https://www.ouedkniss.com) store page built using [puppeteer](https://pptr.dev/)
+# ScrapMeDaddy (don't take the name seriously)
+* a web-scraper for [ouedkniss](https://www.ouedkniss.com) store page built using [puppeteer](https://pptr.dev/)
 
-## i needed to get data for my seeding script for [Microland](https://github.com/akka-null/Microland)
+## I needed to get data for my seeding script for: [Microland](https://github.com/akka-null/Microland)
 
-# description ( i got you future Akka i know i suck at documenting stuff deal with it)
+# description (I got you future Akka, i know i suck at documenting stuff deal with it)
 
 * this script will take a link to a store page and retrieve all the data in an Array of objects: 
-* fields **"type"**, **"category"**,**"condition"** were diffrent from what im using in my DB so i just used the power of Vim to suite my use case.
+* fields **"type"**, **"category"**,**"condition"** were different from what im using in my DB so i just used the power of Vim to suit my use case.
 
 ```json
 {
@@ -27,11 +27,11 @@
 ```
 
 ## usage
-* scrapMeDaddy will take a **link** and **NumberOfPages** as command lin argument
+* scrapMeDaddy will take a **link** and **NumberOfPages** as command-lin argument
 * it will loop through the store pages and get the products links
-* then it will proceed and get each product information and output it array in  **data.js** file
+* then it will proceed and get each product's information and output it array in  **data.js** file
 
-### if you want to get only the gpu in store provide the link category and how manny pages that category hase
+### if you want to get only the gpu in store provide the link category and how many pages that category has
 ``` bash
 npm start "https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page=" 1
 ```
