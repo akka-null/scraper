@@ -35,7 +35,7 @@ const scrapMeDaddy = async () => {
         const browser = await puppeteer.launch({ headless: 'new' }); // this will open the browser 
         const page = await browser.newPage(); // it should be named window like in the browser
         console.log(urls[j]);
-        await page.goto(urls[j], { waitUntil: 'load' });
+        await page.goto(urls[j], { waitUntil: 'networkidle0' });
 
         const dat = await page.evaluate(() =>
             Array.from(document.querySelectorAll("#ProductsShow-0 > div > div.__inner > div > div")).map(e => ({

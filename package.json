@@ -5,13 +5,11 @@
   "main": "scrapMeDady.js",
   "type": "module",
   "scripts": {
-    "microland": "node scrapMeDady.js https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil",
-    "click1": "node scrapMeDady.js ",
-    "click2": "node scrapMeDady.js "
+    "start": "node scrapMeDady.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "akka",
+  "license": "MIT",
   "dependencies": {
     "puppeteer": "^21.9.0"
   }
