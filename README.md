@@ -28,7 +28,8 @@
 ## Show Case
 https://github.com/akka-null/scraper/assets/45569717/803a1256-5907-47db-8436-e7991455e279
 
-
+### products.js
+* the final array i used to seed data, after i removed some unwanted products and edited the **type**, **category**, **condition** fields to suit my need
 
 ## usage
 * scrapMeDaddy will take a **link** and **NumberOfPages** as command-lin argument
