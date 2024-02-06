@@ -25,6 +25,10 @@
 
 },
 ```
+## Show Case
+https://github.com/akka-null/scraper/assets/45569717/803a1256-5907-47db-8436-e7991455e279
+
+
 
 ## usage
 * scrapMeDaddy will take a **link** and **NumberOfPages** as command-lin argument
