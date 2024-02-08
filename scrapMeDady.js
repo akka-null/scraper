@@ -1,3 +1,4 @@
+// NOTE: i could write it better than this ( for a reason it's like this)
 import puppeteer from "puppeteer";
 import fs from "fs";
 const link = process.argv[2];
@@ -5,6 +6,10 @@ const pages = process.argv[3];
 let start = performance.now();
 let urls = [];
 let data = [];
+
+// NOTE: to lazy to add this
+// to get number of pages 
+// Math.max(...Array.from(document.querySelectorAll("#AnnounBrowser-0 > div > div.__inner > div > div > div.text-center.mt-4 > nav > ul > li > button.v-pagination__item")).map(e=> parseInt(e.innerText)))
 
 // NOTE:  the links look like this in ouedkniss
 // https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page=1

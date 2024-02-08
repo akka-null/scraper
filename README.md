@@ -1,12 +1,12 @@
 # ScrapMeDaddy (don't take the name seriously)
 * a web-scraper for [ouedkniss](https://www.ouedkniss.com) store page built using [puppeteer](https://pptr.dev/)
+#### I needed to get data to seed when i was working on [Microland](https://github.com/akka-null/Microland) website
 
-## I needed to get data for my seeding script for: [Microland](https://github.com/akka-null/Microland)
 
-# description (I got you future Akka, i know i suck at documenting stuff deal with it)
+# description (akka ik ,I suck at documenting stuff deal with it)
 
-* this script will take a link to a store page and retrieve all the data in an Array of objects: 
-* fields **"type"**, **"category"**,**"condition"** were different from what im using in my DB so i just used the power of Vim to suit my use case.
+* this script will take a **link** to a store page, and **pages** (number of pages), to retrieve all the data in an Array of objects: 
+* chnaged **"type"**, **"category"**, **"condition"** fields to suit my use case with VIM magic, result in **products.js**
 
 ```json
 {
@@ -28,36 +28,33 @@
 ## Show Case
 https://github.com/akka-null/scraper/assets/45569717/803a1256-5907-47db-8436-e7991455e279
 
-### products.js
-* the final array i used to seed data, after i removed some unwanted products and edited the **type**, **category**, **condition** fields to suit my need
 
 ## usage
 * scrapMeDaddy will take a **link** and **NumberOfPages** as command-lin argument
 * it will loop through the store pages and get the products links
-* then it will proceed and get each product's information and output it array in  **data.js** file
+* then it will proceed and get each product's information and output it in an array of objects and save it in **data.js** file
 
-### if you want to get only the gpu in store provide the link category and how many pages that category has
+### examples: 
+#### get all the products in a store: provide **store-home-page-link** + **pages** that store has 
 ``` bash
+# remove the number that comes after = in the link by default ouedkniss will put 1
+npm start "https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page=" 5
+```
+#### get a category in a store: provide the **category-link** and how many pages that category has
+``` bash
+# getting GPUs 
 npm start "https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page=" 1
-```
-### if you want to get all the products include the home page of the store and the number of pages it has
-``` bash
-npm start https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page= 5
+# remove the number that comes after = in the link by default ouedkniss will put 1
 ```
 
+* ouedkniss links comes in this format:
 ```bash
 npm start STORE_LINK NUMBER_OF_PAGES
-
 # NOTE:  the links look like this in ouedkniss
 # https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page=1
 # https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page=1
-# we mush provide the link?page= NumberOfPages
-# https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page= 1
+# we mush provide the "link?page=" NumberOfPages
+# npm start "# https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page=" 1
+# npm start "https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page=" 1
 
-```
-* ouedkniss links comes in this format:
-```bash
-https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page=1
-# must provide the link without the number and space then the number of pages the store hase
-npm start https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page= 5
 ```
