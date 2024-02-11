@@ -1,5 +1,5 @@
 # ScrapMeDaddy (don't take the name seriously)
-* a web-scraper for [ouedkniss](https://www.ouedkniss.com) store page built using [puppeteer](https://pptr.dev/)
+* a web-scraper for [ouedkniss](https://www.ouedkniss.com)'s store pages built using [puppeteer](https://pptr.dev/)
 #### I needed to get data to seed when i was working on [Microland](https://github.com/akka-null/Microland) website
 
 
@@ -31,16 +31,17 @@ https://github.com/akka-null/scraper/assets/45569717/803a1256-5907-47db-8436-e79
 
 ## usage
 * scrapMeDaddy will take a **link** and **NumberOfPages** as command-lin argument
-* it will loop through the store pages and get the products links
-* then it will proceed and get each product's information and output it in an array of objects and save it in **data.js** file
+* it will loop through the store pages and get the products links, then it will proceed and get each product's information and output it in an array of objects and save it in **data.js** file
 
 ### examples: 
-#### get all the products in a store: provide **store-home-page-link** + **pages** that store has 
+#### get all the products in a store: 
+- provide **store-home-page-link** + **pages** that store has 
 ``` bash
 # remove the number that comes after = in the link by default ouedkniss will put 1
 npm start "https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?page=" 5
 ```
-#### get a category in a store: provide the **category-link** and how many pages that category has
+#### get a category in a store:
+- provide the **category-link** and how many pages that category has
 ``` bash
 # getting GPUs 
 npm start "https://www.ouedkniss.com/store/2236/microland-informatique-oran/accueil?category=informatique-pieces-pc-fixe-carte-graphique&page=" 1
